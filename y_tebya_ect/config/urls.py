@@ -16,7 +16,8 @@ urlpatterns = [
     url(r'^users/', include('y_tebya_ect.users.urls', namespace='users')),
     url(r'^accounts/', include('allauth.urls')),
 
-    # Your stuff: custom urls includes go here
+    # The game
+    url(r'^game/', include('y_tebya_ect.game.urls', namespace='game')),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
