@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     url(
-        regex=r'^$',
+        regex=r'^(?P<username>[\w.@+-]+)/$',
         view=views.GameDashboardView.as_view(),
         name='dashboard'
     ),
